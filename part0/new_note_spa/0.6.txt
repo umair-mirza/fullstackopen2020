@@ -1,0 +1,12 @@
+note over browser:
+The event handler adds the note submitted to the notes array, 
+calls the redrawNotes function which re-renders the list on the page 
+and then calls sendToServer function which sends an AJAX POST 
+request with the note submitted to the server
+end note
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+server-->browser: response {"message":"note created"}
+note over server:
+Server adds the note received in the request body to the
+notes array in the server side js code and responds with
+a JSON message
