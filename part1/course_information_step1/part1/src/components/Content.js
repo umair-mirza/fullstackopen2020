@@ -1,12 +1,18 @@
 import React from 'react'
 import Part from './Part'
+import Total from './Total'
 
-const Content = ({p1, p2, p3, e1, e2, e3}) => {
+const Content = ({parts}) => {
+
+    const total = parts.map(part => part.exercises).reduce((acc, current) => acc + current, 0)
+
    return (
     <>
-        <Part p1={p1} e1={e1} />
-        <Part p2={p2} e2={e2} />
-        <Part p3={p3} e3={e3} />
+        {parts.map(part => 
+        <Part key={part.name} name={part.name} exercises={part.exercises} />
+        )}
+        
+        <Total total={total} />
     </>
    )
 }
