@@ -62,6 +62,14 @@ const App = () => {
         setNewPhone('')
 
         setMessage(`The Contact ${newName} has been successfully Added!`)
+        setError(false)
+        setTimeout(() => {
+          setMessage(null)
+        }, 3000)
+      })
+      .catch(error => {
+        setMessage(error.response.data.error)
+        setError(true)
         setTimeout(() => {
           setMessage(null)
         }, 3000)
