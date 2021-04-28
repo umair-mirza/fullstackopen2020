@@ -1,0 +1,16 @@
+.view-button {
+    background-color: lightskyblue;
+    margin-left: 30px;
+}
+
+.delete-button {
+    background-color: lightpink;
+    margin-left: 20px;
+}
+
+.blogpost {
+    padding: 20px;
+    border: 1px solid green;
+    margin-bottom: 5px;
+    max-width: 70%;
+}

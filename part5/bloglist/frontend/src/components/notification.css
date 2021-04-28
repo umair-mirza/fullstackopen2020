@@ -1,0 +1,13 @@
+.message {
+    padding: 3px;
+    font-size: 18px;
+    color: green;
+    background-color: lightgreen;
+}
+
+.errormsg {
+    padding: 3px;
+    font-size: 18px;
+    color: red;
+    background-color: lightpink;
+}
